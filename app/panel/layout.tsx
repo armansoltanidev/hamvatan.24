@@ -11,7 +11,7 @@ export default function PanelLayout({
       <SideBar />
       <div>
         <Navbar />
-        {children}
+        <div className="p-6">{children}</div>
       </div>
     </div>
   );

@@ -16,16 +16,16 @@ export default function SideBar() {
           <SidebarItem href="/panel/reports">
             <span>گـــزارشات</span>
           </SidebarItem>
-          <SidebarItem href="/panel/reports">
+          <SidebarItem href="/panel/wallet">
             <span>کیف پول من</span>
           </SidebarItem>
-          <SidebarItem href="/panel/reports">
+          <SidebarItem href="/panel/news">
             <span>اطلاعیه ها</span>
           </SidebarItem>
-          <SidebarItem href="/panel/reports">
+          <SidebarItem href="/panel/blog">
             <span>بــلاگ</span>
           </SidebarItem>
-          <SidebarItem href="/panel/reports">
+          <SidebarItem href="/panel/support">
             <span>پشتیبــانی</span>
           </SidebarItem>
         </div>

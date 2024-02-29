@@ -1,5 +1,3 @@
-import { TypographyP } from "@/components/ui/typography";
-
-export default function page() {
+export default function Hybrid() {
   return <div></div>;
 }
