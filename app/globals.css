@@ -110,14 +110,14 @@
 
 .card-mellat {
   background-color: #d81736;
-  opacity: 0.8;
+  opacity: 1;
   background-image: radial-gradient(#fdbd51 0.5px, #d81736 0.5px);
   background-size: 10px 10px;
 }
 
 .card-saderat {
   background-color: #22448f;
-  opacity: 0.8;
+  opacity: 1;
   background-image: radial-gradient(#d3d3d3 0.5px, #22448f 0.5px);
   background-size: 10px 10px;
 }

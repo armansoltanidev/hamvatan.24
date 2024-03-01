@@ -31,7 +31,7 @@ export default function page() {
           آن را به شماره های زیر ارسال کنید.
         </TypographyP>
         <div className="text-center tracking-wider">
-          <TypographyH1>۰{digitsEnToFa(9121727269)}</TypographyH1>
+          <TypographyH1>۰{digitsEnToFa(9058506962)}</TypographyH1>
         </div>
         <TypographyH4 className="text-center">
           واتســاپ، روبیکا، ایتا
