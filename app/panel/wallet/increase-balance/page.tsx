@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { TypographyP } from "@/components/ui/typography";
 import { addCommas, digitsEnToFa } from "@persian-tools/persian-tools";
-import { BadgeAlert, Redo2 } from "lucide-react";
+import { BadgeAlert, MoveUpLeft, Redo2 } from "lucide-react";
 import Link from "next/link";
 
 const CTA_PRICE = [
@@ -19,14 +20,14 @@ export default function page() {
       <div className="flex items-center p-4">
         <TypographyP>
           شما میتوانید مبلغی انتخاب و یا مقدار مورد نظر خود را وارد کنید.
-          <span className="text-xs text-destructive">
+          <span className="text-xs text-destructive mx-1">
             (حداکثــر مبلغ پنج میلیون تومان میباشد.)
           </span>
         </TypographyP>
         <Link href="/">
-          <Button variant="link" size="sm">
+          <Button variant="ghost" size="sm">
             بیشتر بدانید
-            <Redo2 className="mr-1" size={22} strokeWidth={1.2} />
+            <MoveUpLeft className="mr-1" size={20} strokeWidth={1.2} />
           </Button>
         </Link>
       </div>
@@ -42,6 +43,10 @@ export default function page() {
           </Button>
         ))}
       </section>
+      <div className="flex items-center gap-x-4 my-6">
+        <Input className="text-xl w-1/2 py-6" />
+        <Button size="lg">افزایــش موجودی</Button>
+      </div>
     </div>
   );
 }
