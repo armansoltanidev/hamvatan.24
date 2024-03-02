@@ -32,7 +32,7 @@ export default function NewsCard({
   type,
 }: NewsCardProps) {
   return (
-    <div className="border rounded-md w-96 h-52 px-4 py-6 flex flex-col cursor-pointer gap-y-4">
+    <div className="border rounded-md max-w-80 h-56 px-4 py-6 flex flex-col cursor-pointer gap-y-4">
       <div className="flex items-center justify-between">
         <div>
           <TypographyP className="leading-none">{title}</TypographyP>

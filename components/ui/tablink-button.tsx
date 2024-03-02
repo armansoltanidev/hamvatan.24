@@ -14,7 +14,7 @@ export default function TablinkButton({ children, href }: TablinkProps) {
     <Link
       className={cn(
         "px-4 py-2 rounded-full bg-secondary text-primary",
-        pathname === href ? "bg-primary text-primary-foreground" : ""
+        pathname.includes(`${href}`) ? "bg-primary text-primary-foreground" : ""
       )}
       href={href}
     >
