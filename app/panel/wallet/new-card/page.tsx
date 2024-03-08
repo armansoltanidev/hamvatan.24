@@ -15,12 +15,12 @@ export default function page() {
     <div className="flex flex-col">
       <TypographyP className="my-6 text-xl"> ثبت کارت جــدید</TypographyP>
 
-      <div className="border-amber-400 border-2 flex items-center justify-center rounded-md border-dashed max-w-96 h-48 cursor-pointer">
+      <div className="border-amber-400 border-4 flex items-center justify-center rounded-xl border-dashed max-w-96 h-48 cursor-pointer">
         <PlusCircle
-          width={48}
-          height={48}
-          strokeWidth={0.6}
-          className="text-amber-600"
+          width={54}
+          height={54}
+          strokeWidth={1.4}
+          className="text-amber-400"
         />
       </div>
       <TypographyP className="my-6 text-base">

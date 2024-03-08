@@ -8,7 +8,7 @@ export default function WalletLayout({
 }) {
   return (
     <div>
-      <section className="flex justify-between">
+      <section className="flex justify-between flex-wrap">
         <div>
           <TypographyH4>
             توی این صفحه میتونی کیف پولت (موجودیت) رو مدیریت کنی.
@@ -26,10 +26,8 @@ export default function WalletLayout({
           isLoading={false}
         />
       </section>
-      <div className="flex gap-x-3 mt-8">
-        <TablinkButton href="/panel/wallet/increase-balance">
-          افزایش سپـرده
-        </TablinkButton>
+      <div className="flex flex-wrap gap-3 mt-8">
+        <TablinkButton href="/panel/wallet">افزایش سپـرده</TablinkButton>
         <TablinkButton href="/panel/wallet/withdraw-balance">
           برداشت سپـرده
         </TablinkButton>

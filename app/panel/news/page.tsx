@@ -14,7 +14,7 @@ export default function NewsPage() {
       </div>
       {/* FOR NOW MT-7 */}
       <div className="mt-7 flex flex-wrap gap-3">
-        {/* Replace by map func from DB */}
+        {/* Replace by map func from DB use props not compound components to avoid compexity */}
         <NewsCard
           type="warning"
           title="تغییرات در سطح کارمــزد"

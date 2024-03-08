@@ -7,7 +7,7 @@ export default function PanelLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="h-screen grid grid-cols-[2fr_8fr]">
+    <div className="h-screen grid md:grid-cols-[2fr_8fr] ">
       <SideBar />
       <div>
         <Navbar />

@@ -1,10 +1,4 @@
-import {
-  BadgeAlert,
-  BadgeCheck,
-  Copy,
-  CopyIcon,
-  MoreHorizontal,
-} from "lucide-react";
+import { Copy } from "lucide-react";
 import { Badge } from "../ui/badge";
 import { TypographyH4, TypographyP } from "../ui/typography";
 
@@ -64,7 +58,9 @@ export default function PanelCreditCard({
             </TypographyH4>
           </div>
           <div className="w-full flex items-center justify-between">
-            <TypographyP className="text-primary-foreground">{card_name}</TypographyP>
+            <TypographyP className="text-primary-foreground">
+              {card_name}
+            </TypographyP>
             <Badge className="flex items-center gap-x-2">
               شماره حساب: {digitsEnToFa(9029056601)}
             </Badge>

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function SideBar() {
   return (
-    <div className="h-full border-l p-0.5 flex flex-col justify-between">
+    <div className="h-full border-l p-0.5 md:flex flex-col justify-between hidden">
       <div>
         <div className="p-6">
           <Logo />
