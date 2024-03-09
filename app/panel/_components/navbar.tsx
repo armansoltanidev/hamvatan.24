@@ -5,6 +5,7 @@ import { Bell } from "lucide-react";
 
 import Link from "next/link";
 import Profile from "./profile";
+import Notification from "./notification";
 
 export default function Navbar() {
   return (
@@ -20,9 +21,7 @@ export default function Navbar() {
         <Link href="/panel/wallet">
           <Button>موجودی شما : ۱۰,۱۵۴,۱۵۴</Button>
         </Link>
-        <Button variant="outline" size="icon" className="rounded-full">
-          <Bell />
-        </Button>
+        <Notification />
       </div>
     </div>
   );

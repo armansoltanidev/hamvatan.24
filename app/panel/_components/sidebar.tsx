@@ -1,7 +1,14 @@
 import Logo from "@/components/ui/logo/logo";
 import SidebarItem from "./sidebaritem";
 import { Button } from "@/components/ui/button";
-
+import {
+  BiWalletAlt,
+  BiCalendar,
+  BiHeadphone,
+  BiSpreadsheet,
+  BiBell,
+  BiCategoryAlt,
+} from "react-icons/bi";
 export default function SideBar() {
   return (
     <div className="h-full border-l p-0.5 md:flex flex-col justify-between hidden">
@@ -11,21 +18,27 @@ export default function SideBar() {
         </div>
         <div className="flex flex-col">
           <SidebarItem href="/panel">
+            <BiCategoryAlt size={22} />
             <span>شـــارژ و بســته</span>
           </SidebarItem>
           <SidebarItem href="/panel/reports">
+            <BiCalendar size={22} />
             <span>گـــزارشات</span>
           </SidebarItem>
           <SidebarItem href="/panel/wallet">
+            <BiWalletAlt size={22} />
             <span>کیف پول من</span>
           </SidebarItem>
           <SidebarItem href="/panel/news">
+            <BiBell size={22} />
             <span>اطلاعیه ها</span>
           </SidebarItem>
           <SidebarItem href="/panel/blog">
+            <BiSpreadsheet size={22} />
             <span>بــلاگ</span>
           </SidebarItem>
           <SidebarItem href="/panel/support">
+            <BiHeadphone size={22} />
             <span>پشتیبــانی</span>
           </SidebarItem>
         </div>

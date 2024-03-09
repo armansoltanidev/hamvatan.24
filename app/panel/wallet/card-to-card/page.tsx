@@ -11,7 +11,7 @@ import { AlertTriangle } from "lucide-react";
 export default function page() {
   return (
     <section>
-      <div className="flex items-center gap-x-3 mt-5">
+      <div className="flex flex-wrap items-center gap-3 mt-5">
         <PanelCreditCard
           card_name="آرمان سلطانی"
           card_number={6104338688900709}
@@ -37,7 +37,7 @@ export default function page() {
           واتســاپ، روبیکا، ایتا
         </TypographyH4>
       </div>
-      <div className="flex gap-x-2">
+      <div className="md:flex md:gap-x-2 space-y-2">
         <Alert variant="destructive">
           <AlertTriangle />
           <AlertTitle>هشدار مهم!</AlertTitle>
