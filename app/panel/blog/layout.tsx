@@ -24,7 +24,7 @@ export default function BlogLayout({
       <div className="py-6 flex items-center gap-x-4 justify-end">
         <Button variant="outline" className="group">
           پر بازدید ترین این ماه
-          <span className="text-2xl group-hover:animate-bounce">🏆</span>
+          <span className="text-2xl animate-bounce">🏆</span>
         </Button>
         <Button disabled>ثبت نام در بلاگ</Button>
       </div>
