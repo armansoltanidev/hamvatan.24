@@ -18,7 +18,7 @@ export default function Notification() {
             <Bell />
           </Button>
         </PopoverTrigger>
-        <PopoverContent>
+        <PopoverContent className="p-3">
           <div className="flex items-center justify-between sticky top-0 mb-6">
             <TypographyP>پیــام های شما</TypographyP>
             <Link href="pamel/news">
@@ -31,7 +31,9 @@ export default function Notification() {
               </Button>
             </Link>
           </div>
-          <section className="flex items-center justify-between">
+
+          {/* notifcatios card here map over that */}
+          <section className="flex px-2 py-2 rounded-md items-center justify-between border">
             <div>
               <TypographyP className="text-sm">تغییرات سطح کامزد</TypographyP>
               <div className="flex gap-x-3 items-center">
