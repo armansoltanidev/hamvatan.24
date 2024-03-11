@@ -25,7 +25,7 @@ export default function page() {
           variant="saderat"
         />
       </div>
-      <div className="p-16 flex flex-col gap-y-10">
+      <div className="py-16 px-8 flex flex-col gap-y-10">
         <TypographyP>
           لطفا مبلغ مورد نظر خود را به شماره کارت های بالا کارت به کارت و رسید
           آن را به شماره های زیر ارسال کنید.

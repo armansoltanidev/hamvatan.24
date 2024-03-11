@@ -12,7 +12,7 @@ import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const BANK_CARD = cva(
-  "relative px-6 py-4 w-96 h-48 flex items-center flex-col justify-between rounded-md ring-1",
+  "relative px-6 py-4 flex-1 max-w-96 h-48 flex items-center flex-col justify-between rounded-md ring-1",
   {
     variants: {
       variant: {

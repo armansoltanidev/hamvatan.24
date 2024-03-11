@@ -23,7 +23,7 @@ export default function CreditCard({
   isLoading,
 }: CreditCardProps) {
   return (
-    <div className="relative px-6 py-4 w-96 h-48 flex items-center flex-col justify-between  rounded-md card ring-1 ring-primary">
+    <div className="relative px-6 py-4 flex-1 max-w-96 h-48 flex items-center flex-col justify-between  rounded-md card ring-1 ring-primary">
       {isLoading ? (
         <Loading />
       ) : (

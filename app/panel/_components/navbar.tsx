@@ -19,7 +19,9 @@ export default function Navbar() {
       </div>
       <div className="flex items-center gap-x-4">
         <Link href="/panel/wallet">
-          <Button>موجودی شما : ۱۰,۱۵۴,۱۵۴</Button>
+          <Button>
+            <span className="hidden md:block">موجودی شما :</span> ۱۰,۱۵۴,۱۵۴
+          </Button>
         </Link>
         <Notification />
       </div>
