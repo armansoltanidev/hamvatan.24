@@ -3,7 +3,7 @@ import NewsCard from "./_components/news-card";
 
 export default function NewsPage() {
   return (
-    <div>
+    <>
       <div>
         <TypographyH4>
           توی این صفحه همه اعلانات و اطلاعیه های پنل قرار داده میشه!
@@ -48,6 +48,6 @@ export default function NewsPage() {
           گرامی کارمزد پنــل دو درصد افزایش یافت.
         </NewsCard>
       </div>
-    </div>
+    </>
   );
 }

@@ -1,7 +1,4 @@
-import TypographyH1, {
-  TypographyH2,
-  TypographyP,
-} from "@/components/ui/typography";
+import TypographyH1, { TypographyP } from "@/components/ui/typography";
 import { digitsEnToFa } from "@persian-tools/persian-tools";
 import { Clock10 } from "lucide-react";
 import Link from "next/link";

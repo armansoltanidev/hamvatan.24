@@ -17,7 +17,8 @@ import {
 } from "@/components/ui/form";
 
 import { Input } from "@/components/ui/input";
-import { digitsEnToFa } from "@persian-tools/persian-tools";
+import CtaCharge from "../cta-chage";
+import { Minus, Plus } from "lucide-react";
 
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -59,38 +60,47 @@ export function ChargeForm() {
             </FormItem>
           )}
         />
-        <FormField
-          control={form.control}
-          name="username"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel className="text-lg">مبلغ شـــارژ</FormLabel>
-              <FormControl>
-                <Input className="py-8 px-6 text-lg text-center" {...field} />
-              </FormControl>
-              <FormDescription>
-                مبلغ شارژ خود را به افغانی وارد کنید
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <div className="flex items-center justify-between gap-x-2">
-          <div className="bg-sky-200/20 border border-sky-600/50 text-sky-800 w-44 text-center h-20 flex items-center justify-center text-2xl rounded-md">
-            {digitsEnToFa(100)}
+
+        <div className="flex gap-2 flex-wrap justify-between">
+          <CtaCharge />
+          <CtaCharge />
+          <CtaCharge />
+        </div>
+        <div className="flex items-center gap-x-2">
+          <div className="bg-[#fffcf5] p-3 rounded-lg">
+            <Plus
+              className="text-[#fabe32]"
+              width={32}
+              height={32}
+              strokeWidth={2.5}
+            />
           </div>
-          <div className="bg-rose-200/30 border border-rose-600/50 text-rose-800 w-44 text-center h-20 flex items-center justify-center text-2xl rounded-md">
-            {digitsEnToFa(200)}
-          </div>
-          <div className="bg-green-300/30 text-green-800 border border-green-800/50 w-44 text-center h-20 flex items-center justify-center text-2xl rounded-md">
-            {digitsEnToFa(500)}
-          </div>
-          <div className="bg-amber-400/30 text-amber-800 border border-amber-500 w-44 text-center h-20 flex items-center justify-center text-2xl rounded-md">
-            {digitsEnToFa(1000)}
+          <FormField
+            control={form.control}
+            name="username"
+            render={({ field }) => (
+              <FormItem className="flex-1">
+                <FormControl>
+                  <Input className="py-8 px-6 text-lg text-center" {...field} />
+                </FormControl>
+                {/* <FormDescription className="text-center">
+                  مبلغ شارژ خود را به افغانی وارد کنید
+                </FormDescription> */}
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <div className="bg-[#fffcf5] p-3 rounded-lg">
+            <Minus
+              className="text-[#fabe32]"
+              width={32}
+              height={32}
+              strokeWidth={2.5}
+            />
           </div>
         </div>
         <Button
-          className="bg-green-400 hover:bg-green-700 text-xl w-full"
+          className="bg-[#fabe32] hover:bg-[#fabe32] font-semibold text-primary text-2xl w-full py-8"
           size="lg"
           type="submit"
         >

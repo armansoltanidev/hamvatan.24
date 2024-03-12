@@ -1,7 +1,4 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
 import { Button } from "@/components/ui/button";
-import { Bell } from "lucide-react";
 
 import Link from "next/link";
 import Profile from "./profile";
