@@ -111,13 +111,13 @@
 .card-mellat {
   background-color: #d81736;
   opacity: 1;
-  background-image: radial-gradient(#fdbd51 0.7px, #d81736 0.7px);
-  background-size: 10px 10px;
+  background-image: radial-gradient(#fdbd51 1px, #d81736 1px);
+  background-size: 20px 20px;
 }
 
 .card-saderat {
   background-color: #22448f;
   opacity: 1;
-  background-image: radial-gradient(#d3d3d3 0.7px, #22448f 0.7px);
-  background-size: 10px 10px;
+  background-image: radial-gradient(#d3d3d3 1px, #22448f 1px);
+  background-size: 20px 20px;
 }

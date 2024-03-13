@@ -62,9 +62,10 @@ export function ChargeForm() {
         />
 
         <div className="flex gap-2 flex-wrap justify-between">
-          <CtaCharge />
-          <CtaCharge />
-          <CtaCharge />
+          <CtaCharge>50</CtaCharge>
+          <CtaCharge>100</CtaCharge>
+          <CtaCharge>500</CtaCharge>
+          <CtaCharge>1000</CtaCharge>
         </div>
         <div className="flex items-center gap-x-2">
           <div className="bg-[#fffcf5] p-3 rounded-lg">
@@ -79,7 +80,7 @@ export function ChargeForm() {
             control={form.control}
             name="username"
             render={({ field }) => (
-              <FormItem className="flex-1">
+              <FormItem className="flex-1 ">
                 <FormControl>
                   <Input className="py-8 px-6 text-lg text-center" {...field} />
                 </FormControl>
