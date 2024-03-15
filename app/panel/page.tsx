@@ -30,6 +30,7 @@ export default function Hybrid() {
           <TypographyP>
             برای دیدن جزییات بیشتر به قسمت گزارشات بروید
           </TypographyP>
+          <Button>مشاهده بیشتــر</Button>
         </TableCaption>
         <TableHeader>
           <TableRow>
@@ -47,7 +48,7 @@ export default function Hybrid() {
               <Badge>{digitsEnToFa(1)}</Badge>
             </TableCell>
             <TableCell>
-              <TypographyP className="text-lg">شارژ مستقیم</TypographyP>
+              <TypographyP>شارژ مستقیم</TypographyP>
             </TableCell>
             <TableCell>
               <TypographyH4>۰{digitsEnToFa(7908548741)}</TypographyH4>
@@ -56,7 +57,43 @@ export default function Hybrid() {
               <TypographyH3>{digitsEnToFa(500)}</TypographyH3>
             </TableCell>
             <TableCell>
-              <TypographyP className="text-lg font-semibold">موفق</TypographyP>
+              <TypographyP>موفق</TypographyP>
+            </TableCell>
+            <TableCell>دیروز</TableCell>
+          </TableRow>
+          <TableRow className="bg-[#fffcf5]">
+            <TableCell>
+              <Badge>{digitsEnToFa(1)}</Badge>
+            </TableCell>
+            <TableCell>
+              <TypographyP>شارژ مستقیم</TypographyP>
+            </TableCell>
+            <TableCell>
+              <TypographyH4>۰{digitsEnToFa(7908548741)}</TypographyH4>
+            </TableCell>
+            <TableCell>
+              <TypographyH3>{digitsEnToFa(500)}</TypographyH3>
+            </TableCell>
+            <TableCell>
+              <TypographyP>موفق</TypographyP>
+            </TableCell>
+            <TableCell>دیروز</TableCell>
+          </TableRow>
+          <TableRow className="bg-[#fffcf5]">
+            <TableCell>
+              <Badge>{digitsEnToFa(1)}</Badge>
+            </TableCell>
+            <TableCell>
+              <TypographyP>شارژ مستقیم</TypographyP>
+            </TableCell>
+            <TableCell>
+              <TypographyH4>۰{digitsEnToFa(7908548741)}</TypographyH4>
+            </TableCell>
+            <TableCell>
+              <TypographyH3>{digitsEnToFa(500)}</TypographyH3>
+            </TableCell>
+            <TableCell>
+              <TypographyP>موفق</TypographyP>
             </TableCell>
             <TableCell>دیروز</TableCell>
           </TableRow>
