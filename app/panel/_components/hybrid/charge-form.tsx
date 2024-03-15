@@ -100,11 +100,7 @@ export function ChargeForm() {
             />
           </div>
         </div>
-        <Button
-          className="bg-[#fabe32] hover:bg-[#fabe32] font-semibold text-primary text-2xl w-full py-8"
-          size="lg"
-          type="submit"
-        >
+        <Button variant="primary" size="lg" type="submit">
           ارســــال شــارژ
         </Button>
       </form>
