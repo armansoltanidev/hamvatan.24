@@ -1,14 +1,16 @@
-import Logo from "@/components/ui/logo/logo";
-import SidebarItem from "./sidebaritem";
-import { Button } from "@/components/ui/button";
 import {
-  BiWalletAlt,
+  BiBell,
   BiCalendar,
+  BiCategoryAlt,
   BiHeadphone,
   BiSpreadsheet,
-  BiBell,
-  BiCategoryAlt,
+  BiWalletAlt,
 } from "react-icons/bi";
+
+import { Button } from "@/components/ui/button";
+import Logo from "@/components/ui/logo/logo";
+
+import SidebarItem from "./sidebaritem";
 export default function SideBar() {
   return (
     <div className="h-full border-l p-0.5 md:flex flex-col justify-between hidden">

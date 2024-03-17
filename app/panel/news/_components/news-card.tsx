@@ -1,8 +1,9 @@
+import { cva } from "class-variance-authority";
+import { BadgeInfo, CheckCheck, Clock3 } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import { TypographyP } from "@/components/ui/typography";
 import { cn } from "@/lib/utils";
-import { cva } from "class-variance-authority";
-import { BadgeInfo, CheckCheck, Clock3 } from "lucide-react";
 
 type NewsCardProps = {
   title: string;

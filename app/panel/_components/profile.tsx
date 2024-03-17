@@ -1,20 +1,19 @@
 "use client";
 
+import { useState } from "react";
+import { digitsEnToFa } from "@persian-tools/persian-tools";
+import Link from "next/link";
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { TypographyP } from "@/components/ui/typography";
-import { digitsEnToFa } from "@persian-tools/persian-tools";
-import Link from "next/link";
-
-import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
-
 import { useMediaQuery } from "@/hooks/use-media-query";
-import { useState } from "react";
 
 const PROFILE_ITEM = [
   { id: 1001, title: "تنــظیمات", href: "/" },

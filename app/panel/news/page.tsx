@@ -1,4 +1,5 @@
 import { TypographyH4, TypographyP } from "@/components/ui/typography";
+
 import NewsCard from "./_components/news-card";
 
 export default function NewsPage() {

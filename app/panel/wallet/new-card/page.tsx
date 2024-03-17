@@ -1,7 +1,8 @@
-import { Button } from "@/components/ui/button";
-import { TypographyP } from "@/components/ui/typography";
 import { BadgeInfo, PlusCircle } from "lucide-react";
 import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
+import { TypographyP } from "@/components/ui/typography";
 
 const TERM_OF_REGISTER_CARD = [
   { id: 20, text: "هر کاربر حداکثر میتواند سه کارت ثبت کند." },

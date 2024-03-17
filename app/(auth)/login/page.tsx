@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -22,7 +21,10 @@ const formSchema = z.object({
   }),
 });
 
+import Link from "next/link";
+
 import TypographyH1, { TypographyP } from "@/components/ui/typography";
+import UnderlinedLink from "@/components/ui/underlined-link";
 
 export default function LoginPage() {
   // 1. Define your form.
@@ -39,56 +41,61 @@ export default function LoginPage() {
     // ✅ This will be type-safe and validated.
     console.log(values);
   }
+
   return (
-    <div className="bg-secondary h-screen">
-      <div className="bg-primary-foreground mx-auto w-4/6 h-full grid items-center px-10">
-        <div className="space-y-4">
-          <TypographyH1>ورود به هموطن ۲۴</TypographyH1>
-          <TypographyP className="text-muted-foreground">
-            لطفا شماره تلفن خود را وارد کنید.
-          </TypographyP>
-          <Form {...form}>
-            <form className="space-y-2" onSubmit={form.handleSubmit(onSubmit)}>
-              <FormField
-                control={form.control}
-                name="username"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <Input
-                        className="px-6 py-8 placeholder:text-xl placeholder:font-semibold"
-                        placeholder="شماره تلفن"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="username"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <Input
-                        type="password"
-                        className="px-6 py-8 placeholder:text-xl placeholder:font-semibold"
-                        placeholder="رمز عبــور"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <Button variant="primary" size="lg" type="submit">
-                ورود
-              </Button>
-            </form>
-          </Form>
-        </div>
+    <>
+      <div className="mx-auto">
+        <TypographyH1>ورود به هموطن ۲۴</TypographyH1>
       </div>
-    </div>
+      <div className="space-y-4">
+        <TypographyP className="text-muted-foreground">
+          لطفا شماره تلفن خود را وارد کنید.
+        </TypographyP>
+        <Form {...form}>
+          <form className="space-y-3" onSubmit={form.handleSubmit(onSubmit)}>
+            <FormField
+              control={form.control}
+              name="username"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input
+                      className="px-6 py-8 placeholder:text-xl placeholder:font-medium text-xl"
+                      placeholder="شماره تلفن"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="username"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input
+                      type="password"
+                      className="px-6 py-8 placeholder:text-xl placeholder:font-medium text-xl"
+                      placeholder="رمز عبــور"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <Button variant="primary" size="lg" type="submit">
+              ورود
+            </Button>
+
+            <UnderlinedLink href="#" className="inline-block px-2 text-sm">
+              رمز عبورم را فراموش کرده ام؟
+            </UnderlinedLink>
+          </form>
+        </Form>
+      </div>
+    </>
   );
 }

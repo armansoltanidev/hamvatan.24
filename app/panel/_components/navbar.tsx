@@ -1,8 +1,9 @@
+import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
 
-import Link from "next/link";
-import Profile from "./profile";
 import Notification from "./notification";
+import Profile from "./profile";
 
 export default function Navbar() {
   return (

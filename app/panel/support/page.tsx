@@ -1,13 +1,13 @@
-import TypographyH1, { TypographyP } from "@/components/ui/typography";
 import { digitsEnToFa } from "@persian-tools/persian-tools";
 import { Clock10 } from "lucide-react";
 import Link from "next/link";
-
 import {
   BiLogoInstagram,
   BiLogoTelegram,
   BiLogoWhatsapp,
 } from "react-icons/bi";
+
+import TypographyH1, { TypographyP } from "@/components/ui/typography";
 
 export default function SupportPage() {
   return (

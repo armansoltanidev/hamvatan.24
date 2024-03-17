@@ -1,7 +1,6 @@
 
-import ChargeRecent from "./_components/hybrid/charge-recent";
-
 import { ChargeForm } from "./_components/hybrid/charge-form";
+import ChargeRecent from "./_components/hybrid/charge-recent";
 
 export default function Hybrid() {
   return (

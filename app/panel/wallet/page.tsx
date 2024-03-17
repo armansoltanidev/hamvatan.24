@@ -1,10 +1,11 @@
+import { addCommas, digitsEnToFa } from "@persian-tools/persian-tools";
+import { MoveUpLeft } from "lucide-react";
+import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import LearnMoreButton from "@/components/ui/learn-more-button";
 import { TypographyP } from "@/components/ui/typography";
-import { addCommas, digitsEnToFa } from "@persian-tools/persian-tools";
-import { MoveUpLeft } from "lucide-react";
-import Link from "next/link";
 
 const CTA_PRICE = [
   { id: 1, price: 100000 },
@@ -40,7 +41,7 @@ export default function WalletPage() {
         ))}
       </section>
       <div className="flex items-center gap-x-4 my-6">
-        <Input className="text-xl w-1/2 py-6" />
+        <Input  className="text-xl w-1/2 py-6" />
         <Button size="lg">افزایــش موجودی</Button>
       </div>
     </div>

@@ -1,3 +1,6 @@
+import { digitsEnToFa } from "@persian-tools/persian-tools";
+import { AlertTriangle } from "lucide-react";
+
 import PanelCreditCard from "@/components/bank-credit-card/panel-credit-card";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import TypographyH1, {
@@ -5,8 +8,6 @@ import TypographyH1, {
   TypographyH4,
   TypographyP,
 } from "@/components/ui/typography";
-import { digitsEnToFa } from "@persian-tools/persian-tools";
-import { AlertTriangle } from "lucide-react";
 
 export default function page() {
   return (

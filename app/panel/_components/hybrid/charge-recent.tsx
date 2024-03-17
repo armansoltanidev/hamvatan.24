@@ -1,11 +1,9 @@
-import {
-  TypographyH3,
-  TypographyH4,
-  TypographyP,
-} from "@/components/ui/typography";
+import { digitsEnToFa } from "@persian-tools/persian-tools";
+import { CheckCircle,MoreHorizontal, XCircle } from "lucide-react";
 
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 // table
-
 import {
   Table,
   TableBody,
@@ -15,10 +13,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
-import { digitsEnToFa } from "@persian-tools/persian-tools";
-import { Badge } from "@/components/ui/badge";
-import { MoreHorizontal } from "lucide-react";
+import { TypographyP } from "@/components/ui/typography";
 
 const RECENT_ITEMS = [
   {
@@ -57,6 +52,15 @@ const RECENT_ITEMS = [
     date: "19:48 | 1402/11/25",
     operator: "اتصالات",
   },
+  {
+    id: 103,
+    service: "شارژ مستقیم",
+    number: "08545312432",
+    amount: "299",
+    status: "success",
+    date: "19:48 | 1402/11/26",
+    operator: "افغان بیسیم",
+  },
 ];
 
 export default function ChargeRecent() {
@@ -85,19 +89,27 @@ export default function ChargeRecent() {
               <Badge>{digitsEnToFa(index + 1)}</Badge>
             </TableCell>
             <TableCell>
-              <TypographyP className="font-semibold">{item.service}</TypographyP>
+              <TypographyP className="font-semibold">
+                {item.service}
+              </TypographyP>
             </TableCell>
             <TableCell>
-              <TypographyP className="font-semibold">{digitsEnToFa(item.number)}</TypographyP>
+              <TypographyP className="font-semibold">
+                {digitsEnToFa(item.number)}
+              </TypographyP>
             </TableCell>
             <TableCell>
-              <TypographyP className="font-semibold">{digitsEnToFa(item.amount)} افغانی</TypographyP>
+              <TypographyP className="font-semibold">
+                {digitsEnToFa(item.amount)} افغانی
+              </TypographyP>
             </TableCell>
             <TableCell>
-              <TypographyP className="font-semibold">{item.operator}</TypographyP>
+              <TypographyP className="font-semibold">
+                {item.operator}
+              </TypographyP>
             </TableCell>
             <TableCell>
-              <TypographyP>{item.status}</TypographyP>
+              {item.status === "success" ? <CheckCircle /> : <XCircle />}
             </TableCell>
             <TableCell>{digitsEnToFa(item.date)}</TableCell>
             <TableCell>

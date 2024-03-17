@@ -1,11 +1,11 @@
 "use client";
-import { TypographyP } from "@/components/ui/typography";
+import { useState } from "react";
 import { BadgeInfo } from "lucide-react";
 
+import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { TypographyP } from "@/components/ui/typography";
 
 const TERM_OF_WITHDRAW = [
   { id: 101, text: "حداقل مبلغ برداشت سیصد هزار تومان میباشید." },

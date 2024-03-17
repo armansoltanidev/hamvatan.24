@@ -1,5 +1,6 @@
-import { TypographyH2, TypographyP } from "@/components/ui/typography";
 import { addCommas, digitsEnToFa } from "@persian-tools/persian-tools";
+
+import { TypographyH2, TypographyP } from "@/components/ui/typography";
 
 export default function CtaCharge({ children }: { children: string }) {
   return (

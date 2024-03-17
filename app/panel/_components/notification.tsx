@@ -1,17 +1,19 @@
 "use client";
+import { useState } from "react";
+import { Badge, Bell } from "lucide-react";
+import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { TypographyP } from "@/components/ui/typography";
-import { Badge, Bell } from "lucide-react";
-import Link from "next/link";
-import NotficationRow from "./notfication-row";
 import { useMediaQuery } from "@/hooks/use-media-query";
-import { useState } from "react";
-import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
+
+import NotficationRow from "./notfication-row";
 
 export default function Notification() {
   const [open, setOpen] = useState(false);

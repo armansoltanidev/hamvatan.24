@@ -1,7 +1,8 @@
-import { Button } from "@/components/ui/button";
-import { TypographyH4, TypographyP } from "@/components/ui/typography";
 import { digitsEnToFa } from "@persian-tools/persian-tools";
 import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
+import { TypographyH4, TypographyP } from "@/components/ui/typography";
 
 export default function NotFound() {
   return (

@@ -1,3 +1,5 @@
+import { MoreHorizontal } from "lucide-react";
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
@@ -7,7 +9,6 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import { TypographyH4, TypographyP } from "@/components/ui/typography";
-import { MoreHorizontal } from "lucide-react";
 
 export default function CardBlog() {
   return (

@@ -1,11 +1,12 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import { digitsFaToEn } from "@persian-tools/persian-tools";
+import { Minus, Plus } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
-
 import {
   Form,
   FormControl,
@@ -15,10 +16,8 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-
 import { Input } from "@/components/ui/input";
 import CtaCharge from "../cta-chage";
-import { Minus, Plus } from "lucide-react";
 
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -38,7 +37,7 @@ export function ChargeForm() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values);
+    console.log(digitsFaToEn(values.username));
   }
 
   return (

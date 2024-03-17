@@ -1,6 +1,6 @@
-import { TypographyH4, TypographyP } from "@/components/ui/typography";
 import CreditCard from "@/components/bank-credit-card/credit-card";
 import TablinkButton from "@/components/ui/tablink-button";
+import { TypographyH4, TypographyP } from "@/components/ui/typography";
 export default function WalletLayout({
   children,
 }: {

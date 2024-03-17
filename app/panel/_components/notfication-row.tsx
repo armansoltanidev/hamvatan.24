@@ -1,5 +1,6 @@
-import { TypographyP } from "@/components/ui/typography";
 import { Clock3 } from "lucide-react";
+
+import { TypographyP } from "@/components/ui/typography";
 
 type NotifcationRowProps = {
   title: string;
