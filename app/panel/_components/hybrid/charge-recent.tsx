@@ -1,5 +1,13 @@
 import { digitsEnToFa } from "@persian-tools/persian-tools";
-import { CheckCircle,MoreHorizontal, XCircle } from "lucide-react";
+import {
+  CheckCircle,
+  Copy,
+  CopyCheckIcon,
+  MoreHorizontal,
+  RefreshCcw,
+  Search,
+  XCircle,
+} from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -15,6 +23,12 @@ import {
 } from "@/components/ui/table";
 import { TypographyP } from "@/components/ui/typography";
 
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+
 const RECENT_ITEMS = [
   {
     id: 99,
@@ -24,24 +38,27 @@ const RECENT_ITEMS = [
     status: "success",
     date: "12:48 | 1402/12/25",
     operator: "ام تی ان",
+    transaction_code: "985547",
   },
   {
     id: 100,
     service: "شارژ مستقیم",
-    number: "07985474514",
+    number: "0798547451",
     amount: "259",
     status: "success",
     date: "12:56 | 1402/12/26",
     operator: "ام تی ان",
+    transaction_code: "985457",
   },
   {
     id: 101,
     service: "شارژ مستقیم",
-    number: "07745745748",
+    number: "0774574574",
     amount: "202",
     status: "failed",
     date: "14:48 | 1402/11/25",
     operator: "روشن",
+    transaction_code: "154877",
   },
   {
     id: 102,
@@ -51,15 +68,17 @@ const RECENT_ITEMS = [
     status: "pending",
     date: "19:48 | 1402/11/25",
     operator: "اتصالات",
+    transaction_code: "154874",
   },
   {
     id: 103,
     service: "شارژ مستقیم",
-    number: "08545312432",
+    number: "0854531243",
     amount: "299",
     status: "success",
     date: "19:48 | 1402/11/26",
     operator: "افغان بیسیم",
+    transaction_code: "220515",
   },
 ];
 
@@ -78,6 +97,7 @@ export default function ChargeRecent() {
           <TableHead>مبـلغ تراکنش</TableHead>
           <TableHead>اوپراتور</TableHead>
           <TableHead>وضعیت تراکنش</TableHead>
+          <TableHead>کد پیــگیری</TableHead>
           <TableHead>تاریخ و زمان</TableHead>
           <TableHead>عملیات</TableHead>
         </TableRow>
@@ -111,11 +131,32 @@ export default function ChargeRecent() {
             <TableCell>
               {item.status === "success" ? <CheckCircle /> : <XCircle />}
             </TableCell>
+            <TableCell>{digitsEnToFa(item.transaction_code)}</TableCell>
             <TableCell>{digitsEnToFa(item.date)}</TableCell>
             <TableCell>
-              <Button size="round">
-                <MoreHorizontal width={16} height={16} />
-              </Button>
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button size="round">
+                    <MoreHorizontal width={16} height={16} />
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-full flex flex-col gap-y-2">
+                  <Button variant="outline" className="gap-x-2">
+                    استفاده مجدد از شماره
+                    <Copy size={20} strokeWidth={1.5} />
+                  </Button>
+                  <div className="flex gap-x-2">
+                    <Button variant="outline" className="gap-x-2">
+                      بروزرسانی
+                      <RefreshCcw size={20} strokeWidth={1} />
+                    </Button>
+                    <Button variant="outline" className="gap-x-2">
+                      استعلام
+                      <Search size={20} strokeWidth={1} />
+                    </Button>
+                  </div>
+                </PopoverContent>
+              </Popover>
             </TableCell>
           </TableRow>
         ))}

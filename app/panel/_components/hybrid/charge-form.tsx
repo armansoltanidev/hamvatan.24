@@ -67,7 +67,7 @@ export function ChargeForm() {
                 <Input className="py-8 px-6 text-lg text-left" {...field} />
               </FormControl>
               <FormDescription>
-                شماره خود را بدون صفر اول وارد کنید. مثال: ۰۷۷۴۵۱۵۴۱۲
+                شماره خود را با صفر اول وارد کنید. مثال: ۰۷۷۴۵۱۵۴۱۲
               </FormDescription>
               <FormMessage />
             </FormItem>
