@@ -41,7 +41,7 @@ export default function WalletPage() {
         ))}
       </section>
       <div className="flex items-center gap-x-4 my-6">
-        <Input  className="text-xl w-1/2 py-6" />
+        <Input className="text-xl w-1/2 py-6" />
         <Button size="lg">افزایــش موجودی</Button>
       </div>
     </div>

@@ -18,7 +18,7 @@ import { useMediaQuery } from "@/hooks/use-media-query";
 const PROFILE_ITEM = [
   { id: 1001, title: "تنــظیمات", href: "/" },
   { id: 1002, title: "قوانین", href: "/" },
-  { id: 1003, title: "سوالات متداول", href: "/" },
+  { id: 1003, title: "سوالات متداول", href: "/faq" },
   { id: 1004, title: "تمــاس با ما", href: "/" },
 ];
 

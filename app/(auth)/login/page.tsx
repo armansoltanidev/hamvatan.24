@@ -10,18 +10,18 @@ import {
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
 const formSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
+  user_number: z.string().min(11, {
+    message: "شماره وارد شده اشتباهــه!",
+  }),
+  user_password: z.string({ required_error: "وارد کردن رمز الزامیه!" }).min(8, {
+    message: "حداقل باید هشت کلمه وارد کنید",
   }),
 });
-
-import Link from "next/link";
 
 import TypographyH1, { TypographyP } from "@/components/ui/typography";
 import UnderlinedLink from "@/components/ui/underlined-link";
@@ -31,7 +31,7 @@ export default function LoginPage() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: "",
+      user_number: "",
     },
   });
 
@@ -55,7 +55,7 @@ export default function LoginPage() {
           <form className="space-y-3" onSubmit={form.handleSubmit(onSubmit)}>
             <FormField
               control={form.control}
-              name="username"
+              name="user_number"
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
@@ -71,7 +71,7 @@ export default function LoginPage() {
             />
             <FormField
               control={form.control}
-              name="username"
+              name="user_password"
               render={({ field }) => (
                 <FormItem>
                   <FormControl>

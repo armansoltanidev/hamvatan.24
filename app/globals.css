@@ -84,19 +84,27 @@
 }
 @keyframes l5 {
   0% {
-    box-shadow: 20px 0 #000, -20px 0 #0002;
+    box-shadow:
+      20px 0 #000,
+      -20px 0 #0002;
     background: #000;
   }
   33% {
-    box-shadow: 20px 0 #000, -20px 0 #0002;
+    box-shadow:
+      20px 0 #000,
+      -20px 0 #0002;
     background: #0002;
   }
   66% {
-    box-shadow: 20px 0 #0002, -20px 0 #000;
+    box-shadow:
+      20px 0 #0002,
+      -20px 0 #000;
     background: #0002;
   }
   100% {
-    box-shadow: 20px 0 #0002, -20px 0 #000;
+    box-shadow:
+      20px 0 #0002,
+      -20px 0 #000;
     background: #000;
   }
 }
@@ -120,4 +128,10 @@
   opacity: 1;
   background-image: radial-gradient(#d3d3d3 1px, #22448f 1px);
   background-size: 20px 20px;
+}
+
+@layer utilities {
+  .gradirnt-yellow {
+    @apply inset-0 -z-10 w-full px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000000ec_40%,#fabe32_100%)];
+  }
 }

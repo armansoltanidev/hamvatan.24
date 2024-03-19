@@ -11,18 +11,35 @@ import {
   FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
-const formSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
-});
+const formSchema = z
+  .object({
+    first_name: z.string().min(3, {
+      message: "حداقل باید سه کلمه وارد کنید",
+    }),
+    last_name: z.string().min(2, {
+      message: "حداقل باید سه کلمه وارد کنید",
+    }),
 
-import Link from "next/link";
+    user_number: z.string().min(11, {
+      message: "فرمت شماره اشتبــاهه",
+    }),
+
+    user_password: z.string().min(8, {
+      message: "حداقل باید هشت کاراکتر وارد کنید",
+    }),
+
+    confirm_password: z.string().min(8, {
+      message: "حداقل باید هشت کاراکتر وارد کنید",
+    }),
+  })
+  .refine((data) => data.user_password === data.confirm_password, {
+    message: "رمز عبور ها برابر نیستند!",
+    path: ["confirm_password"],
+  });
 
 import TypographyH1, { TypographyP } from "@/components/ui/typography";
 import UnderlinedLink from "@/components/ui/underlined-link";
@@ -31,7 +48,11 @@ export default function SignUpPage() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: "",
+      first_name: "",
+      last_name: "",
+      user_number: "",
+      user_password: "",
+      confirm_password: "",
     },
   });
 
@@ -56,7 +77,7 @@ export default function SignUpPage() {
             <div className="flex gap-x-2">
               <FormField
                 control={form.control}
-                name="username"
+                name="first_name"
                 render={({ field }) => (
                   <FormItem className="flex-1">
                     <FormControl>
@@ -72,7 +93,7 @@ export default function SignUpPage() {
               />
               <FormField
                 control={form.control}
-                name="username"
+                name="last_name"
                 render={({ field }) => (
                   <FormItem className="flex-1">
                     <FormControl>
@@ -90,7 +111,7 @@ export default function SignUpPage() {
 
             <FormField
               control={form.control}
-              name="username"
+              name="user_number"
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
@@ -106,7 +127,7 @@ export default function SignUpPage() {
             />
             <FormField
               control={form.control}
-              name="username"
+              name="user_password"
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
@@ -117,14 +138,13 @@ export default function SignUpPage() {
                       {...field}
                     />
                   </FormControl>
-
                   <FormMessage />
                 </FormItem>
               )}
             />
             <FormField
               control={form.control}
-              name="username"
+              name="confirm_password"
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
@@ -135,9 +155,6 @@ export default function SignUpPage() {
                       {...field}
                     />
                   </FormControl>
-                  <FormDescription className="px-2">
-                    لطفا تا حد امکان از وارد کردن رمز های آسان خودداری نمایید.
-                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}

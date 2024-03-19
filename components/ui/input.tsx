@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
+import { digitsEnToFa } from "@persian-tools/persian-tools";
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {}
