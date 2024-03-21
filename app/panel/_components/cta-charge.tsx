@@ -12,7 +12,7 @@ export default function CtaCharge({
   return (
     <div
       onClick={onClick}
-      className="group flex-1 flex flex-col justify-center cursor-pointer h-32 text-center hover:bg-[#fffcf5] border rounded-lg hover:border-[#fabe32] hover:shadow-sm hover:shadow-[#fabe32]/70 transition-colors ease-in-out duration-300"
+      className="group flex-1 flex  md:flex-col items-center gap-x-3 justify-center cursor-pointer h-20 md:h-32 py-6 text-center hover:bg-[#fffcf5] border rounded-lg hover:border-[#fabe32] hover:shadow-sm hover:shadow-[#fabe32]/70 transition-colors ease-in-out duration-300"
     >
       <TypographyH2 className="group-hover:text-[#fabe32]">
         {digitsEnToFa(addCommas(children))}

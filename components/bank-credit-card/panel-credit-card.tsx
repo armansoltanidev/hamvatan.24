@@ -1,3 +1,5 @@
+"use client";
+
 import { Copy } from "lucide-react";
 import { Badge } from "../ui/badge";
 import { TypographyH4, TypographyP } from "../ui/typography";
@@ -10,6 +12,8 @@ import { Button } from "../ui/button";
 import Loading from "../ui/loadings/loading";
 import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
+import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
+import toast from "react-hot-toast";
 
 const BANK_CARD = cva(
   "relative px-6 py-4 flex-1 max-w-96 h-48 flex items-center flex-col justify-between rounded-md ring-1",
@@ -36,6 +40,18 @@ export default function PanelCreditCard({
   isLoading,
   variant,
 }: CreditCardProps) {
+  const [copiedText, copy] = useCopyToClipboard();
+
+  function handleCopyClipBoard(text: number) {
+    copy(text.toString())
+      .then(() => {
+        toast.success(` ${digitsEnToFa(text)} کپـــی شد`);
+      })
+      .catch((error) => {
+        toast.error("کپی نشـــد!", error);
+      });
+  }
+
   return (
     <div className={cn(BANK_CARD({ variant }))}>
       {isLoading ? (
@@ -48,7 +64,11 @@ export default function PanelCreditCard({
               {getBankNameFromCardNumber(card_number)}
             </TypographyP>
             <Button variant="outline" size="round">
-              <Copy width={18} className="text-primary" />
+              <Copy
+                onClick={() => handleCopyClipBoard(card_number)}
+                width={18}
+                className="text-primary"
+              />
             </Button>
           </div>
           <div>

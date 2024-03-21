@@ -41,7 +41,7 @@ export default function page() {
           قوانین صرفا برای جلوگیری از تخلفات و ارائه خدمات بهتره 😉
         </TypographyP>
       </div>
-      <div className="flex-1 flex flex-col gap-y-6 md:w-1/3 mx-auto p-4">
+      <div className="flex-1 flex flex-col gap-y-6 md:w-1/3 mx-auto p-4 mt-8">
         <TypographyP>
           قوانین هموطن خیلی سادس کافیه موارد زیر رو رعایت کنی هر گونه عدم رعایت
           قوانین زیر ممکنه{" "}

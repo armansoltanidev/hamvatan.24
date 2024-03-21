@@ -1,8 +1,9 @@
+"use client";
+
 import { digitsEnToFa } from "@persian-tools/persian-tools";
 import {
   CheckCircle,
   Copy,
-  CopyCheckIcon,
   MoreHorizontal,
   RefreshCcw,
   Search,
@@ -28,6 +29,8 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
+import toast from "react-hot-toast";
 
 const RECENT_ITEMS = [
   {
@@ -83,8 +86,20 @@ const RECENT_ITEMS = [
 ];
 
 export default function ChargeRecent() {
+  const [copiedText, copy] = useCopyToClipboard();
+
+  function handleCopyNumber(text: string) {
+    copy(text.toString())
+      .then(() => {
+        toast.success(` ${digitsEnToFa(text)} کپـــی شد`);
+      })
+      .catch((error) => {
+        toast.error("کپی نشـــد!", error);
+      });
+  }
+
   return (
-    <Table>
+    <Table className="hidden">
       <TableCaption>
         <TypographyP>برای دیدن جزییات بیشتر به قسمت گزارشات بروید</TypographyP>
         <Button>مشاهده بیشتــر</Button>
@@ -114,8 +129,14 @@ export default function ChargeRecent() {
               </TypographyP>
             </TableCell>
             <TableCell>
-              <TypographyP className="font-semibold">
+              <TypographyP className="font-semibold flex items-center gap-x-2">
                 {digitsEnToFa(item.number)}
+                <Copy
+                  onClick={() => handleCopyNumber(item.number)}
+                  strokeWidth={1.5}
+                  size={24}
+                  className="cursor-pointer"
+                />
               </TypographyP>
             </TableCell>
             <TableCell>

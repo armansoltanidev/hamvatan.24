@@ -56,7 +56,10 @@ export function ChargeForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className=" md:space-y-8 space-y-3"
+      >
         <FormField
           control={form.control}
           name="number"
@@ -64,7 +67,10 @@ export function ChargeForm() {
             <FormItem>
               <FormLabel className="text-lg">شمــاره تلــفن</FormLabel>
               <FormControl>
-                <Input className="py-8 px-6 text-lg text-left" {...field} />
+                <Input
+                  className=" md:py-8 md:px-6 text-lg text-left"
+                  {...field}
+                />
               </FormControl>
               <FormDescription>
                 شماره خود را با صفر اول وارد کنید. مثال: ۰۷۷۴۵۱۵۴۱۲
@@ -74,7 +80,7 @@ export function ChargeForm() {
           )}
         />
 
-        <div className="flex gap-2 flex-wrap justify-between">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 justify-between">
           <CtaCharge onClick={() => form.setValue("amount", 50)}>50</CtaCharge>
 
           <CtaCharge onClick={() => form.setValue("amount", 100)}>
@@ -94,14 +100,22 @@ export function ChargeForm() {
             render={({ field }) => (
               <FormItem className="flex-1 ">
                 <FormControl>
-                  <Input className="py-8 px-6 text-xl text-center" {...field} />
+                  <Input
+                    className="md:py-8 md:px-6 text-xl text-center"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
         </div>
-        <Button variant="primary" size="lg" type="submit">
+        <Button
+          variant="primary"
+          size="lg"
+          className="text-sm py-4 md:text-2xl md:py-8"
+          type="submit"
+        >
           ارســــال شــارژ
         </Button>
       </form>

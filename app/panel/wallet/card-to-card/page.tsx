@@ -15,13 +15,13 @@ export default function page() {
       <div className="flex flex-wrap items-center gap-3 mt-5">
         <PanelCreditCard
           card_name="آرمان سلطانی"
-          card_number={6104338688900709}
+          card_number={6104338988900709}
           isLoading={false}
           variant="mellat"
         />
         <PanelCreditCard
           card_name="آرمان سلطانی"
-          card_number={6037697608215734}
+          card_number={6037697677131630}
           isLoading={false}
           variant="saderat"
         />
