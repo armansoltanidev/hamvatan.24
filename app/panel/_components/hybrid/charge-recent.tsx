@@ -99,7 +99,7 @@ export default function ChargeRecent() {
   }
 
   return (
-    <Table className="hidden">
+    <Table>
       <TableCaption>
         <TypographyP>برای دیدن جزییات بیشتر به قسمت گزارشات بروید</TypographyP>
         <Button>مشاهده بیشتــر</Button>

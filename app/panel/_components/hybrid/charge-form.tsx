@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import CtaCharge from "../cta-charge";
+import { digitsEnToFa } from "@persian-tools/persian-tools";
 
 const formSchema = z.object({
   number: z

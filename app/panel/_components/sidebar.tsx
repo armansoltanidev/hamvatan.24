@@ -19,7 +19,7 @@ export default function SideBar() {
           <Logo />
         </div>
         <div className="flex flex-col">
-          <SidebarItem href="/panel">
+          <SidebarItem href="/panel/hybrid">
             <BiCategoryAlt size={22} />
             <span>شـــارژ و بســته</span>
           </SidebarItem>
