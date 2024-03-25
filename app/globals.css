@@ -69,6 +69,7 @@
 @layer base {
   * {
     @apply border-border;
+    scroll-behavior: smooth;
   }
   body {
     @apply bg-background text-foreground;
@@ -137,7 +138,6 @@
   .gradirnt-red {
     @apply inset-0 -z-10 w-full px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000000ec_40%,#ef4444_100%)];
   }
-
 }
 
 /* Chrome, Safari, Edge, Opera */
