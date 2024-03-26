@@ -21,6 +21,7 @@ import TypographyH1, {
   TypographyH3,
   TypographyH4,
 } from "@/components/ui/typography";
+import { MoveLeft } from "lucide-react";
 
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -61,7 +62,10 @@ export default function FastCharge() {
                     شماره مقصــد
                   </FormLabel>
                   <FormControl>
-                    <Input className="py-8 px-6 text-xl" {...field} />
+                    <Input
+                      className="py-8 px-6 text-xl rounded-3xl"
+                      {...field}
+                    />
                   </FormControl>
                   <FormDescription>
                     شماره را بدون صفر اول وارد کنید
@@ -80,7 +84,7 @@ export default function FastCharge() {
                   </FormLabel>
                   <FormControl>
                     <Input
-                      className="py-8 px-6 text-xl text-center"
+                      className="py-8 px-6 text-xl text-center rounded-3xl"
                       {...field}
                     />
                   </FormControl>
@@ -91,14 +95,22 @@ export default function FastCharge() {
                 </FormItem>
               )}
             />
-            <Button className="w-full py-6" variant="cta">
+            <Button className="w-full py-6 rounded-3xl" variant="cta">
               محاسبه کن
             </Button>
           </div>
           <div className="flex-1 bg-white rounded-2xl p-6 flex flex-col items-center justify-around">
             <div className="flex flex-col gap-y-2">
-              <TypographyH4>شماره مقصد: ۹۳۷۸۴۵۱۲۴۴۷۴+</TypographyH4>
-              <TypographyH4>اوپــراتور مقصد: اتصالات</TypographyH4>
+              <TypographyH4>
+                <span className="text-sm font-normal ml-3">شمــاره مقصد:</span>
+                ۹۳۷۸۴۵۱۲۴۴۷۴+
+              </TypographyH4>
+              <TypographyH4>
+                <span className="text-sm font-normal ml-3">
+                  اوپـراتور مقصد:
+                </span>
+                اتصالات
+              </TypographyH4>
             </div>
 
             <div>
@@ -132,6 +144,7 @@ export default function FastCharge() {
                   <FormItem>
                     <FormControl>
                       <Input
+                        className="rounded-3xl py-6 px-4"
                         placeholder="شماره تلفن جهت پیگیری های آتی"
                         {...field}
                       />
@@ -146,11 +159,12 @@ export default function FastCharge() {
             <TypographyH4>انتخاب درگاه پرداخت</TypographyH4>
             <Button
               type="submit"
-              className="w-full text-2xl"
+              className="w-full text-2xl font-medium"
               variant="primary"
               size="x2l"
             >
               برو به درگاه
+              <MoveLeft className="mx-4" />
             </Button>
           </div>
         </form>
