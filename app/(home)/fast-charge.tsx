@@ -116,10 +116,10 @@ export default function FastCharge() {
             <div>
               <TypographyH2 className="text-emerald-600">
                 <span className="text-base">مبلغ قابــل پرداخت:</span>
-                <span className="mx-4">۱,۴۵۱,۴۸۴</span>
+                <span className="mx-4 text-4xl">۱,۴۵۱,۴۸۴</span>
               </TypographyH2>
               <div>
-                <ul className="list-disc text-sm font-normal text-emerald-800">
+                <ul className="list-disc text-base font-normal text-emerald-800">
                   <li>هزینه شارژ: ۱,۲۹,۴۱۵</li>
                   <li>مالیات بر ارزش افزوده : ۹۸,۴۵۴</li>
                   <li>هزینه خدمات: ۲۹,۴۱۵</li>

@@ -138,6 +138,10 @@
   .gradirnt-red {
     @apply inset-0 -z-10 w-full px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000000ec_40%,#ef4444_100%)];
   }
+
+  .gradient-instagram {
+    background: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7);
+  }
 }
 
 /* Chrome, Safari, Edge, Opera */
