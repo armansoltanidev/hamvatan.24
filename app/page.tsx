@@ -10,6 +10,13 @@ import Image from "next/image";
 import Link from "next/link";
 import FastCharge from "./(home)/fast-charge";
 import { InfiniteMovingCardTestomonioal } from "./(home)/Infinite-moving-testomonioal";
+import {
+  BiLogoTelegram,
+  BiLogoWhatsapp,
+  BiMessageAltDetail,
+  BiSolidInbox,
+} from "react-icons/bi";
+import { Telemetry } from "next/dist/telemetry/storage";
 
 export default function Page() {
   return (
@@ -136,13 +143,55 @@ export default function Page() {
           ما هر روز کلی مطالب آموزشی جالب در اینستاگراممون منتشر می‌کنیم!
         </TypographyH2>
         <Button
-          className="text-fuchsia-700 text-xl"
+          className="text-fuchsia-600 text-xl"
           size="x2l"
           variant="outline"
         >
           مشــاهده پست های اینستاگــرام
         </Button>
       </section>
+      <footer className="bg-primary mt-16 h-auto px-4 py-16">
+        <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-x-8 gap-y-16 ">
+          <div className="flex-1 flex flex-col">
+            <div>
+              <p className="font-bold text-4xl text-primary-foreground">
+                همــوطن <span>۲۴</span>
+              </p>
+              <p className="font-medium text-sm text-muted-foreground">
+                هـــمراه شما،هـر لحــظه و هر جــا
+              </p>
+            </div>
+            <TypographyP className="text-sm text-justify text-primary-foreground mt-4">
+              داستان هموطن ۲۴ سال ۱۴۰۳ در شهری کوچک شروع شد، هموطن ۲۴ همیشه هدف
+              خود را سهولت خرید و پشتیبــانی قوی دانسته و همواره تلاش خود را جهت
+              انجام این وظیفه خود انجام میدهد.
+            </TypographyP>
+          </div>
+
+          <div className="flex-1">
+            <TypographyH4 className="text-primary-foreground">
+              راه های ارتباطی ما
+            </TypographyH4>
+            <div className="text-muted-foreground">
+              <ul>
+                <li className="flex items-center gap-x-2">
+                  <BiLogoWhatsapp size={32} />
+                  <TypographyP>پشتیبــانی واتساپ</TypographyP>
+                </li>
+                <li className="flex items-center gap-x-2">
+                  <BiLogoTelegram size={32} />
+                  <TypographyP>پشتیبــانی تلــگرام</TypographyP>
+                </li>
+                <li className="flex items-center gap-x-2">
+                  <BiSolidInbox size={32} />
+                  <TypographyP>ایمیل ما: support@hamvatan24.com</TypographyP>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex-1 text-primary-foreground text-2xl">اینماد</div>
+        </div>
+      </footer>
     </>
   );
 }
