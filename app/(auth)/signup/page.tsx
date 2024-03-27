@@ -159,7 +159,7 @@ export default function SignUpPage() {
                 </FormItem>
               )}
             />
-            <Button variant="primary" size="lg" type="submit">
+            <Button className="w-full" variant="primary" size="lg" type="submit">
               ثبت نام در پنــل
             </Button>
 

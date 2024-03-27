@@ -26,11 +26,21 @@ export default function Page() {
           <Logo />
           <nav>
             <ul className="hidden md:flex items-center gap-x-10 text-muted-foreground">
-              <Link href="/">صفحه اصلی</Link>
-              <Link href="/panel/hybrid">محصولات</Link>
-              <Link href="/">شارژ سریع</Link>
-              <Link href="/">بلاگ</Link>
-              <Link href="/">پشتیبانی</Link>
+              <Link className="hover:text-primary" href="/">
+                صفحه اصلی
+              </Link>
+              <Link className="hover:text-primary" href="/panel/hybrid">
+                ویژگـی های ما
+              </Link>
+              <Link className="hover:text-primary" href="#fast-charge">
+                شارژ سریع
+              </Link>
+              <Link className="hover:text-primary" href="/rules">
+                قوانین
+              </Link>
+              <Link className="hover:text-primary" href="/faq">
+                سوالات متداول
+              </Link>
             </ul>
           </nav>
           <div>
@@ -44,7 +54,7 @@ export default function Page() {
         <main className="h-auto mt-8 rounded-3xl w-full bg-primary grid grid-cols-6 py-4 px-6">
           <div className="hidden md:block col-span-2"></div>
           <div className="col-span-6 md:col-span-4 px-3 py-16 md:px-6">
-            <h1 className="bg-gradient-to-tr text-4xl md:text-7xl font-extrabold tracking-normal from-slate-500 via-slate-300 to-slate-100 text-transparent bg-clip-text py-6">
+            <h1 className="bg-gradient-to-tr text-5xl md:text-7xl md:leading-snug font-extrabold tracking-normal from-slate-500 via-slate-300 to-slate-100 text-transparent bg-clip-text py-6">
               سریع ترین روش خرید شارژ افغانستان
             </h1>
             <TypographyP className="text-muted-foreground text-lg">
@@ -101,6 +111,19 @@ export default function Page() {
           <FastCharge />
         </div>
       </div>
+      <div className="max-w-[1440px] mx-auto h-[400px] bg-secondary rounded-3xl my-16">
+        <div className="mx-auto max-w-[1440px] px-6 py-16">
+          <div className="flex items-center gap-x-4">
+            <span className="relative flex items-center justify-center h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+            </span>
+            <TypographyH4 className="font-semibold text-3xl">
+              ویژگی های
+            </TypographyH4>
+          </div>
+        </div>
+      </div>
       <section className="h-auto bg-muted/50 mb-24">
         <div className="mx-auto max-w-[1440px] px-6 py-16">
           <div className="flex items-center gap-x-4">
@@ -150,9 +173,9 @@ export default function Page() {
           مشــاهده پست های اینستاگــرام
         </Button>
       </section>
-      <footer className="bg-primary mt-16 h-auto px-4 py-16">
-        <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-x-8 gap-y-16 ">
-          <div className="flex-1 flex flex-col">
+      <footer className="h-auto py-16 px-12 mx-auto mt-8 rounded-3xl max-w-[1440px] bg-primary ">
+        <div className="grid grid-cols-12 gap-6 md:justify-items-center">
+          <div className="col-span-12 md:col-span-6 flex flex-col">
             <div>
               <p className="font-bold text-4xl text-primary-foreground">
                 همــوطن <span>۲۴</span>
@@ -168,8 +191,8 @@ export default function Page() {
             </TypographyP>
           </div>
 
-          <div className="flex-1">
-            <TypographyH4 className="text-primary-foreground">
+          <div className="col-span-12 md:col-span-3">
+            <TypographyH4 className="text-primary-foreground/80 mb-4">
               راه های ارتباطی ما
             </TypographyH4>
             <div className="text-muted-foreground">
@@ -189,7 +212,46 @@ export default function Page() {
               </ul>
             </div>
           </div>
-          <div className="flex-1 text-primary-foreground text-2xl">اینماد</div>
+          <div className="col-span-12 md:col-span-3">
+            <TypographyH4 className="text-primary-foreground/80 mb-4">
+              دسترسی سریع
+            </TypographyH4>
+            <div className="text-muted-foreground">
+              <ul className="list-disc">
+                <li>
+                  <Link href="/">صفحــه اصلی</Link>
+                </li>
+                <li>
+                  <Link href="/">پنل نمایندگان</Link>
+                </li>
+                <li>
+                  <Link href="/">قوانین وبسایت</Link>
+                </li>
+                <li>
+                  <Link href="/">سوالات متداول</Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="cpr flex">
+          <div className="flex-1">
+            <p className="font-bold text-4xl text-primary-foreground">
+              ۰۹۰۵۸۵۰۶۹۶۲
+            </p>
+            <TypographyP className="text-xs max-w-lg text-primary-foreground/80 mt-6">
+              ساعات تماس با پشتیبانی : از ساعت ۹ صبح الی ۲۲ شب حتی در روزهای
+              تعطیل در ساعات تعطیلی فروشگاه امکان تماس با پشتیبانی وجود ندارد
+            </TypographyP>
+            <TypographyP className="text-xl font-semibold text-primary-foreground mt-6">
+              تــمامی حقوق مادی و معنوی محفوظ است.
+            </TypographyP>
+            <TypographyP className="text-xs max-w-lg text-primary-foreground/60 mt-2">
+              طرح وبسایت الهام گرفته شده از وبسایت اپل آیدی۲۴ مرجع خرید اپل آیدی
+              میباشد.
+            </TypographyP>
+          </div>
+          <div className="flex-1">1</div>
         </div>
       </footer>
     </>

@@ -155,3 +155,11 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+.cpr {
+  color: var(--color-dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin: 50px auto 0;
+  padding: 30px 20px;
+  width: 100%;
+}

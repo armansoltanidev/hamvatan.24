@@ -114,7 +114,7 @@ export function ChargeForm() {
         <Button
           variant="primary"
           size="lg"
-          className="text-sm py-4 md:text-2xl md:py-8"
+          className="text-sm py-4 md:text-2xl md:py-8 w-full"
           type="submit"
         >
           ارســــال شــارژ

@@ -86,7 +86,12 @@ export default function LoginPage() {
                 </FormItem>
               )}
             />
-            <Button variant="primary" size="lg" type="submit">
+            <Button
+              variant="primary"
+              size="lg"
+              type="submit"
+              className="w-full"
+            >
               ورود
             </Button>
 
