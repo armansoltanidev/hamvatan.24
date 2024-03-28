@@ -10,14 +10,14 @@ export default function AuthLayout({
 }) {
   return (
     <div className="bg-secondary h-screen">
-      <div className="bg-primary-foreground mx-auto w-4/6 h-full grid items-center px-10">
+      <div className="bg-primary-foreground mx-auto md:w-4/6 h-full grid items-center px-4 md:px-10">
         {children}
         <div className="flex items-center justify-between">
           <Link href="#">
             <TypographyP>مشکل در ورود دارید؟</TypographyP>
           </Link>
           <div>
-            <ul className="flex items-center gap-x-6">
+            <ul className="flex flex-col gap-y-4 md:flex-row items-center gap-x-6">
               <UnderlinedLink href="#">قوانیــن</UnderlinedLink>
               <UnderlinedLink href="#">سوالات متداول</UnderlinedLink>
               <UnderlinedLink href="#">پشتیبــانی</UnderlinedLink>

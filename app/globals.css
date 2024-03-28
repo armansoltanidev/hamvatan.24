@@ -142,6 +142,13 @@
   .gradient-instagram {
     background: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7);
   }
+  .flex-center-between {
+    @apply flex items-center justify-between;
+  }
+
+  .text-gradient-slate {
+    @apply bg-gradient-to-tr from-slate-500 via-slate-300 to-slate-100 bg-clip-text tracking-normal text-transparent;
+  }
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -152,9 +159,9 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type="number"] {
+/* input[type="number"] {
   -moz-appearance: textfield;
-}
+} */
 
 .cpr {
   color: var(--color-dark);

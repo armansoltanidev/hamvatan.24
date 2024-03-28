@@ -37,7 +37,7 @@ import React from "react";
 
 export function InfiniteMovingCardTestomonioal() {
   return (
-    <div className="flex flex-col antialiase items-center justify-center relative overflow-hidden">
+    <div className="antialiase relative flex flex-col items-center justify-center overflow-hidden">
       <InfiniteMovingCards items={testimonials} direction="left" speed="slow" />
     </div>
   );
