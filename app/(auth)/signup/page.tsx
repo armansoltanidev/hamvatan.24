@@ -82,7 +82,7 @@ export default function SignUpPage() {
                   <FormItem className="flex-1">
                     <FormControl>
                       <Input
-                        className="px-6 py-8 placeholder:text-xl placeholder:font-medium text-xl"
+                        className="px-6 py-8 text-xl placeholder:text-xl placeholder:font-medium"
                         placeholder="نــام"
                         {...field}
                       />
@@ -98,7 +98,7 @@ export default function SignUpPage() {
                   <FormItem className="flex-1">
                     <FormControl>
                       <Input
-                        className="px-6 py-8 placeholder:text-xl placeholder:font-medium text-xl"
+                        className="px-6 py-8 text-xl placeholder:text-xl placeholder:font-medium"
                         placeholder="نام خانــوادگی"
                         {...field}
                       />
@@ -116,7 +116,7 @@ export default function SignUpPage() {
                 <FormItem>
                   <FormControl>
                     <Input
-                      className="px-6 py-8 placeholder:text-xl placeholder:font-medium text-xl"
+                      className="px-6 py-8 text-xl placeholder:text-xl placeholder:font-medium"
                       placeholder="شماره تلفن"
                       {...field}
                     />
@@ -133,7 +133,7 @@ export default function SignUpPage() {
                   <FormControl>
                     <Input
                       type="password"
-                      className="px-6 py-8 placeholder:text-xl placeholder:font-medium text-xl"
+                      className="px-6 py-8 text-xl placeholder:text-xl placeholder:font-medium"
                       placeholder="رمز عبــور"
                       {...field}
                     />
@@ -150,7 +150,7 @@ export default function SignUpPage() {
                   <FormControl>
                     <Input
                       type="password"
-                      className="px-6 py-8 placeholder:text-xl placeholder:font-medium text-xl"
+                      className="px-6 py-8 text-xl placeholder:text-xl placeholder:font-medium"
                       placeholder="تکرار رمز عبــور"
                       {...field}
                     />
@@ -159,11 +159,16 @@ export default function SignUpPage() {
                 </FormItem>
               )}
             />
-            <Button className="w-full" variant="primary" size="lg" type="submit">
+            <Button
+              className="w-full"
+              variant="primary"
+              size="lg"
+              type="submit"
+            >
               ثبت نام در پنــل
             </Button>
 
-            <UnderlinedLink href="#" className="inline-block px-2 text-sm">
+            <UnderlinedLink href="/login" className="inline-block px-2 text-sm">
               حساب دارید؟ وارد شوید.
             </UnderlinedLink>
           </form>

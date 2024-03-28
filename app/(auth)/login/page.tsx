@@ -60,7 +60,7 @@ export default function LoginPage() {
                 <FormItem>
                   <FormControl>
                     <Input
-                      className="px-6 py-8 placeholder:text-xl placeholder:font-medium text-xl"
+                      className="px-6 py-8 text-xl placeholder:text-xl placeholder:font-medium"
                       placeholder="شماره تلفن"
                       {...field}
                     />
@@ -77,7 +77,7 @@ export default function LoginPage() {
                   <FormControl>
                     <Input
                       type="password"
-                      className="px-6 py-8 placeholder:text-xl placeholder:font-medium text-xl"
+                      className="px-6 py-8 text-xl placeholder:text-xl placeholder:font-medium"
                       placeholder="رمز عبــور"
                       {...field}
                     />
@@ -95,9 +95,17 @@ export default function LoginPage() {
               ورود
             </Button>
 
-            <UnderlinedLink href="#" className="inline-block px-2 text-sm">
-              رمز عبورم را فراموش کرده ام؟
-            </UnderlinedLink>
+            <div className="flex-center-between">
+              <UnderlinedLink href="#" className="inline-block px-2 text-sm">
+                رمز عبورم را فراموش کرده ام؟
+              </UnderlinedLink>
+              <UnderlinedLink
+                href="/signup"
+                className="inline-block px-2 text-sm"
+              >
+                ثبت نام در پنــل
+              </UnderlinedLink>
+            </div>
           </form>
         </Form>
       </div>
