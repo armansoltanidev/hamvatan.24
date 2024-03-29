@@ -22,19 +22,26 @@ import TypographyH1, {
   TypographyH4,
 } from "@/components/ui/typography";
 import { MoveLeft } from "lucide-react";
+import { useState } from "react";
+import { detectOperator } from "@/lib/utils";
 
 const formSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
+  number: z.string().regex(/^(070|071|072|079|073|078|076|077|074|075)\d{7}$/, {
+    message: "شماره وارد شده معتبر نیس",
+  }),
+  amount: z.number().min(2, {
+    message: "شماره وارد شده معتبر نیس",
   }),
 });
 
 export default function FastCharge() {
+  const [operator, setOperator] = useState("");
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: "",
+      number: "",
+      amount: 50,
     },
   });
 
@@ -43,19 +50,22 @@ export default function FastCharge() {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values);
+    const operator = detectOperator(values.number);
+    setOperator(operator);
   }
+
   return (
     <>
       <Form {...form}>
         <form
           id="fast-charge"
           onSubmit={form.handleSubmit(onSubmit)}
-          className="flex h-full flex-col justify-between gap-3 md:flex-row px-2 py-2 md:p-6"
+          className="flex h-full flex-col justify-between gap-3 px-2 py-2 md:flex-row md:p-6"
         >
-          <div className="flex flex-1 flex-col justify-around gap-y-5 rounded-2xl px-4 py-4 bg-white md:p-6">
+          <div className="flex flex-1 flex-col justify-around gap-y-5 rounded-2xl bg-white px-4 py-4 md:p-6">
             <FormField
               control={form.control}
-              name="username"
+              name="number"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className="text-lg font-semibold">
@@ -63,12 +73,13 @@ export default function FastCharge() {
                   </FormLabel>
                   <FormControl>
                     <Input
+                      maxLength={10}
                       className="rounded-3xl px-6 py-8 text-xl"
                       {...field}
                     />
                   </FormControl>
                   <FormDescription>
-                    شماره را بدون صفر اول وارد کنید
+                    شماره را با صفر اول وارد کنید
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -76,7 +87,7 @@ export default function FastCharge() {
             />
             <FormField
               control={form.control}
-              name="username"
+              name="amount"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className="text-lg font-semibold">
@@ -99,7 +110,7 @@ export default function FastCharge() {
               محاسبه کن
             </Button>
           </div>
-          <div className="flex flex-1 flex-col items-center justify-around rounded-2xl bg-white p-6 space-y-6">
+          <div className="flex flex-1 flex-col items-center justify-around space-y-6 rounded-2xl bg-white p-6">
             <div className="flex flex-col gap-y-2">
               <TypographyH4>
                 <span className="ml-3 text-sm font-normal">شمــاره مقصد:</span>
@@ -109,7 +120,12 @@ export default function FastCharge() {
                 <span className="ml-3 text-sm font-normal">
                   اوپـراتور مقصد:
                 </span>
-                اتصالات
+                <span className="text-xs font-light">
+                  {operator ? undefined || null : "لطفا شماره را وارد کنید"}
+                </span>
+                {operator && (
+                  <span className="text-lg font-semibold">{operator}</span>
+                )}
               </TypographyH4>
             </div>
 
@@ -137,9 +153,9 @@ export default function FastCharge() {
                   میخواهم شماره را خود را برای دریافت پیگیری های آتی وارد کنم
                 </label>
               </div>
-              <FormField
+              {/* <FormField
                 control={form.control}
-                name="username"
+                name="amount"
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
@@ -152,7 +168,7 @@ export default function FastCharge() {
                     <FormMessage />
                   </FormItem>
                 )}
-              />
+              /> */}
             </div>
           </div>
           <div className="flex flex-1 flex-col justify-between rounded-2xl bg-white p-6">

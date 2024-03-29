@@ -1,15 +1,18 @@
+import { persianDateString } from "@/lib/utils";
 import { TypographyH3, TypographyH4, TypographyP } from "../typography";
+import { digitsEnToFa } from "@persian-tools/persian-tools";
 
 export default function CardAnimate() {
+  const date = persianDateString();
   return (
-    <div className="bg-primary-foreground h-20 w-64 rounded-3xl flex items-center justify-evenly">
-      <div className="relative h-14 w-14 rounded-full flex items-center justify-center">
-        <span className="animate-pulse absolute inline-flex h-full w-full rounded-full bg-[#fabe32] opacity-75"></span>
-        <span className="relative inline-flex rounded-full h-4/6 w-4/6 bg-[#fabe32]"></span>
+    <div className="flex h-20 w-64 items-center justify-evenly rounded-3xl bg-primary-foreground">
+      <div className="relative flex h-14 w-14 items-center justify-center rounded-full">
+        <span className="absolute inline-flex h-full w-full animate-pulse rounded-full bg-[#fabe32] opacity-75"></span>
+        <span className="relative inline-flex h-4/6 w-4/6 rounded-full bg-[#fabe32]"></span>
       </div>
       <div className="flex flex-col gap-y-2">
         <TypographyP className="text-xs text-muted-foreground">
-          یکشنبه - ۵ فروردین ۱۴۰۳
+          <span>{digitsEnToFa(date)}</span>
         </TypographyP>
         <TypographyH4 className="text-xs font-normal">
           در حال انجام سفارشات
