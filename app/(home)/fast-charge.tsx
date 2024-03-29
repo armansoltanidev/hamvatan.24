@@ -50,9 +50,9 @@ export default function FastCharge() {
         <form
           id="fast-charge"
           onSubmit={form.handleSubmit(onSubmit)}
-          className="flex flex-col md:flex-row gap-3 justify-between h-full p-6"
+          className="flex h-full flex-col justify-between gap-3 md:flex-row px-2 py-2 md:p-6"
         >
-          <div className="flex-1 bg-white rounded-2xl p-6 flex flex-col gap-y-5 justify-around">
+          <div className="flex flex-1 flex-col justify-around gap-y-5 rounded-2xl px-4 py-4 bg-white md:p-6">
             <FormField
               control={form.control}
               name="username"
@@ -63,7 +63,7 @@ export default function FastCharge() {
                   </FormLabel>
                   <FormControl>
                     <Input
-                      className="py-8 px-6 text-xl rounded-3xl"
+                      className="rounded-3xl px-6 py-8 text-xl"
                       {...field}
                     />
                   </FormControl>
@@ -84,7 +84,7 @@ export default function FastCharge() {
                   </FormLabel>
                   <FormControl>
                     <Input
-                      className="py-8 px-6 text-xl text-center rounded-3xl"
+                      className="rounded-3xl px-6 py-8 text-center text-xl"
                       {...field}
                     />
                   </FormControl>
@@ -95,18 +95,18 @@ export default function FastCharge() {
                 </FormItem>
               )}
             />
-            <Button className="w-full py-6 rounded-3xl" variant="cta">
+            <Button className="w-full rounded-3xl py-6" variant="cta">
               محاسبه کن
             </Button>
           </div>
-          <div className="flex-1 bg-white rounded-2xl p-6 flex flex-col items-center justify-around">
+          <div className="flex flex-1 flex-col items-center justify-around rounded-2xl bg-white p-6 space-y-6">
             <div className="flex flex-col gap-y-2">
               <TypographyH4>
-                <span className="text-sm font-normal ml-3">شمــاره مقصد:</span>
+                <span className="ml-3 text-sm font-normal">شمــاره مقصد:</span>
                 ۹۳۷۸۴۵۱۲۴۴۷۴+
               </TypographyH4>
               <TypographyH4>
-                <span className="text-sm font-normal ml-3">
+                <span className="ml-3 text-sm font-normal">
                   اوپـراتور مقصد:
                 </span>
                 اتصالات
@@ -144,7 +144,7 @@ export default function FastCharge() {
                   <FormItem>
                     <FormControl>
                       <Input
-                        className="rounded-3xl py-6 px-4"
+                        className="rounded-3xl px-4 py-6"
                         placeholder="شماره تلفن جهت پیگیری های آتی"
                         {...field}
                       />
@@ -155,7 +155,7 @@ export default function FastCharge() {
               />
             </div>
           </div>
-          <div className="flex-1 bg-white rounded-2xl flex flex-col justify-between p-6">
+          <div className="flex flex-1 flex-col justify-between rounded-2xl bg-white p-6">
             <TypographyH4>انتخاب درگاه پرداخت</TypographyH4>
             <Button
               type="submit"

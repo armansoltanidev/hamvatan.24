@@ -5,7 +5,7 @@ import { BiLogoTelegram, BiLogoWhatsapp, BiSolidInbox } from "react-icons/bi";
 
 export default function Footer() {
   return (
-    <footer className="mx-auto mt-8 h-auto max-w-[1440px] rounded-3xl bg-primary px-12 py-16 ">
+    <footer className="mx-auto mt-8 h-auto max-w-[1440px] rounded-3xl bg-primary px-12 py-16">
       <div className="grid grid-cols-12 gap-6 md:justify-items-center">
         <div className="col-span-12 flex flex-col md:col-span-6">
           <div>

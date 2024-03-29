@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/ui/logo/logo";
+import { Menu } from "lucide-react";
 import Link from "next/link";
 
 const navbarItems = [
@@ -12,7 +13,7 @@ const navbarItems = [
 
 export default function Header() {
   return (
-    <div className="flex-center-between px-4 py-8 md:px-0">
+    <div className="flex-center-between px-2 py-3 md:px-0 md:py-8">
       <Logo />
       <nav>
         <ul className="hidden items-center gap-x-10 md:flex ">
@@ -27,12 +28,15 @@ export default function Header() {
           ))}
         </ul>
       </nav>
-      <div>
+      <div className="hidden md:block">
         <Link href="/login">
           <Button size="xl" variant="cta">
             ورود | ثبت نام
           </Button>
         </Link>
+      </div>
+      <div className="block md:hidden">
+        <Menu className="cursor-pointer text-primary" size={42} />
       </div>
     </div>
   );
